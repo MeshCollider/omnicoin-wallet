@@ -1,5 +1,11 @@
 omnicoin Wallet
 -----------------
+v0.2.5
+* Update to the latest version of bitcoin-wallet, including the addition of paper wallet sweep
+
+v0.2.0
+* Update to Dark Gravity Wave difficulty retargeting algorithm.
+
 v0.1.1
 * Forked digitalcoin-wallet v0.1.7-beta for omnicoin V0.1.1
 
