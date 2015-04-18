@@ -59,14 +59,13 @@
 	<application
 		android:name="net.meshcollision.wallet.WalletApplication"
 		android:allowBackup="false"
-		android:hardwareAccelerated="true"
 		android:icon="@drawable/app_icon"
-		android:label="@string/app_name"
-		android:theme="@style/My.Theme" >
+		android:label="@string/app_name" >
 		<activity
 			android:name="net.meshcollision.wallet.ui.WalletActivity"
 			android:configChanges="keyboard|keyboardHidden"
-			android:launchMode="singleTask" />
+			android:launchMode="singleTask"
+			android:theme="@style/My.Theme" />
 
 		<activity-alias
 			android:name="net.meshcollision.wallet.WalletActivity"
@@ -90,6 +89,7 @@
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/send_coins_activity_title"
 			android:screenOrientation="behind"
+			android:theme="@style/My.Theme.ChildActivity"
 			android:windowSoftInputMode="adjustResize" >
 			<intent-filter android:label="@string/send_coins_activity_title" >
 				<action android:name="android.intent.action.VIEW" />
@@ -131,46 +131,33 @@
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/request_coins_activity_title"
 			android:screenOrientation="behind"
+			android:theme="@style/My.Theme.ChildActivity"
 			android:windowSoftInputMode="adjustResize" />
-		<activity
-                android:name="net.meshcollision.wallet.ui.TransactionActivity"
-                android:configChanges="keyboard|keyboardHidden"
-                android:label="@string/transaction_activity_title"
-                android:screenOrientation="behind" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <data android:scheme="ltctx" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-            </intent-filter>
-        </activity>
 		<activity
 			android:name="net.meshcollision.wallet.ui.AddressBookActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/address_book_activity_title"
-			android:screenOrientation="behind" />
+			android:screenOrientation="behind"
+			android:theme="@style/My.Theme.ChildActivity" />
 		<activity
 			android:name="net.meshcollision.wallet.ui.ExchangeRatesActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/exchange_rates_activity_title"
-			android:screenOrientation="behind" />
+			android:screenOrientation="behind" 
+			android:theme="@style/My.Theme.ChildActivity" />
 		<activity
 			android:name="net.meshcollision.wallet.ui.NetworkMonitorActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/network_monitor_activity_title"
-			android:screenOrientation="behind" />
+			android:screenOrientation="behind" 
+			android:theme="@style/My.Theme.ChildActivity" />
 		<activity
 			android:name="net.meshcollision.wallet.ui.PreferencesActivity"
 			android:label="@string/preferences_activity_title"
-			android:screenOrientation="behind" />
+			android:screenOrientation="behind"
+			android:theme="@style/My.Theme.ChildActivity"/>
 		<activity
-			android:name="net.meshcollision.wallet.ui.AboutActivity"
-			android:label="@string/about_title"
-			android:screenOrientation="behind" />
-		<activity
-			android:name="net.meshcollision.wallet.ui.ImportKeysActivity"
+			android:name="de.schildbach.wallet.ui.RestoreWalletActivity"
 			android:configChanges="orientation|keyboard|keyboardHidden"
 			android:theme="@style/My.Theme.Dialog" >
 			<intent-filter android:label="@string/import_keys_intent_filter_action" >
@@ -178,22 +165,23 @@
 
 				<category android:name="android.intent.category.DEFAULT" />
 
-				<data android:mimeType="x-omnicoin/private-keys" />
+				<data android:mimeType="application/x-omnicoin-wallet-backup" />
 				<data android:mimeType="application/octet-stream" />
 			</intent-filter>
 		</activity>
 		<activity
-			android:name="net.meshcollision.wallet.ui.ScanActivity"
+			android:name="de.schildbach.wallet.ui.ScanActivity"
 			android:configChanges="orientation|keyboard|keyboardHidden"
 			android:screenOrientation="landscape"
 			android:stateNotNeeded="true"
 			android:theme="@style/My.Theme.Fullscreen"
 			android:windowSoftInputMode="stateAlwaysHidden" />
 		<activity
-			android:name="net.meshcollision.wallet.ui.send.SweepWalletActivity"
+			android:name="de.schildbach.wallet.ui.send.SweepWalletActivity"
 			android:configChanges="keyboard|keyboardHidden"
 			android:label="@string/sweep_wallet_activity_title"
 			android:screenOrientation="behind"
+			android:theme="@style/My.Theme.ChildActivity"
 			android:windowSoftInputMode="adjustResize" />
 
 		<provider
@@ -204,6 +192,11 @@
 			android:name="net.meshcollision.wallet.ExchangeRatesProvider"
 			android:authorities="net.meshcollision.wallet.omnicoin.exchange_rates"
 			android:exported="false" />
+		<provider
+			android:name="net.meshcollision.wallet.FileAttachmentProvider"
+			android:authorities="net.meshcollision.wallet_test.file_attachment"
+			android:exported="false"
+			android:grantUriPermissions="true" />
 
 		<receiver
 			android:name="net.meshcollision.wallet.WalletBalanceWidgetProvider"
@@ -234,6 +227,14 @@
 				<data android:scheme="package" />
 			</intent-filter>
 		</receiver>
+		
+		<service
+			android:name="de.schildbach.wallet.service.UpgradeWalletService"
+			android:exported="false" />
+
+		<meta-data
+			android:name="android.nfc.disable_beam_default"
+			android:value="true" />
 	</application>
 
 </manifest>
