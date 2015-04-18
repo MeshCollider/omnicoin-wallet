@@ -189,11 +189,17 @@ public final class WalletActivity extends AbstractOnDemandServiceActivity
 			new StringInputParser(input)
 			{
 				@Override
-				protected void handlePaymentIntent(final PaymentIntent paymentIntent)
+				protected void handlePaymentIntent(@Nonnull final PaymentIntent paymentIntent)
 				{
 					SendCoinsActivity.start(WalletActivity.this, paymentIntent);
 				}
-
+				
+				@Override
+				protected void handlePrivateKey(@Nonnull final ECKey key)
+				{
+					SweepWalletActivity.start(WalletActivity.this, key);
+				}
+				
 				@Override
 				protected void handleDirectTransaction(final Transaction tx)
 				{
@@ -259,6 +265,10 @@ public final class WalletActivity extends AbstractOnDemandServiceActivity
 
 			case R.id.wallet_options_exchange_rates:
 				startActivity(new Intent(this, ExchangeRatesActivity.class));
+				return true;
+				
+			case R.id.wallet_options_sweep_wallet:
+				SweepWalletActivity.start(this);
 				return true;
 
 			case R.id.wallet_options_network_monitor:

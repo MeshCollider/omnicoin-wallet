@@ -17,16 +17,23 @@
 
 package net.meshcollision.wallet.ui;
 
+import javax.annotation.Nonnull;
+
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.bitcoin.core.ECKey;
 import com.google.bitcoin.core.Transaction;
+import com.google.bitcoin.core.VerificationException;
 
 import net.meshcollision.wallet.PaymentIntent;
 import net.meshcollision.wallet.ui.InputParser.StringInputParser;
+import net.meshcollision.wallet.WalletApplication;
+import net.meshcollision.wallet.ui.send.SendCoinsActivity;
+import net.meshcollision.wallet.ui.send.SweepWalletActivity;
 
 /**
  * @author Andreas Schildbach
@@ -53,9 +60,17 @@ public final class SendCoinsQrActivity extends AbstractOnDemandServiceActivity
 			new StringInputParser(input)
 			{
 				@Override
-				protected void handlePaymentIntent(final PaymentIntent paymentIntent)
+				protected void handlePaymentIntent(@Nonnull final PaymentIntent paymentIntent)
 				{
 					SendCoinsActivity.start(SendCoinsQrActivity.this, paymentIntent);
+
+					SendCoinsQrActivity.this.finish();
+				}
+				
+				@Override
+				protected void handlePrivateKey(@Nonnull final ECKey key)
+				{
+					SweepWalletActivity.start(SendCoinsQrActivity.this, key);
 
 					SendCoinsQrActivity.this.finish();
 				}

@@ -192,18 +192,16 @@
 			android:theme="@style/My.Theme.Fullscreen"
 			android:windowSoftInputMode="stateAlwaysHidden" />
 		<activity
-+			android:name="de.schildbach.wallet.ui.send.SweepWalletActivity"
-+			android:configChanges="keyboard|keyboardHidden"
-+			android:label="@string/sweep_wallet_activity_title"
-+			android:screenOrientation="behind"
-+			android:windowSoftInputMode="adjustResize" />
+			android:name="net.meshcollision.wallet.ui.send.SweepWalletActivity"
+			android:configChanges="keyboard|keyboardHidden"
+			android:label="@string/sweep_wallet_activity_title"
+			android:screenOrientation="behind"
+			android:windowSoftInputMode="adjustResize" />
 
-        <!-- Need to update this for the coin -->
 		<provider
 			android:name="net.meshcollision.wallet.AddressBookProvider"
 			android:authorities="net.meshcollision.wallet.omnicoin.address_book"
 			android:exported="false" />
-        <!-- Need to update this for the coin -->
 		<provider
 			android:name="net.meshcollision.wallet.ExchangeRatesProvider"
 			android:authorities="net.meshcollision.wallet.omnicoin.exchange_rates"
