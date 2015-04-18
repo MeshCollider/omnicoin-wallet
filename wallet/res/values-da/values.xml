@@ -2,11 +2,11 @@
 <resources>
 
 	<string-array name="preferences_precision_labels">
-		<item>OMC, 8 decimaler</item>
-		<item>OMC, 6 decimaler</item>
-		<item>OMC, 4 decimaler</item>
-		<item>mOMC, 2 decimaler</item>
-		<item>µOMC, uden decimaler</item>
+		<item>BTC, 8 decimaler</item>
+		<item>BTC, 6 decimaler</item>
+		<item>BTC, 4 decimaler</item>
+		<item>mBTC, 2 decimaler</item>
+		<item>µBTC, uden decimaler</item>
 	</string-array>
 
 </resources>

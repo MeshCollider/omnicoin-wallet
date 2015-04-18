@@ -1,65 +1,59 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-
-	<string name="help_wallet">
+  <string name="help_wallet">
 <![CDATA[
 		<p>
-			La parte superior izquierda de la pantalla muestra tu dirección Omnicoin seleccionada, que tendrán que conocer quienes te envíen Omnicoins.
-			Pulsar para cambiar la dirección.
+			La parte superior izquierda de la pantalla muestra su balance en Bitcoins y en una moneda nacional que elija.
+			Toque para ir a la lista de monedas nacionales, y toque en una de las monedas para seleccionarla como predeterminada.
 		</p>
 		<p>
-			El código QR a la derecha contiene tu dirección Omnicoin y puede utilizarse para que otras personas lo exploren.
-			Pulsa sobre el código QR para obtener una versión mayor.
+			El código QR en la derecha contiene su dirección de Bitcoin y se puede usar para ser escaneada por alguien más.
+			Toque en el código QR para ver una versión más grande.
 		</p>
 		<p>
-			En el centro de la pantalla se muestra tu saldo.
-			El valor de tu cartera se muestra también en la moneda local elegida.
-			Pulsa sobre el saldo para mostrar la lista de todas las monedas. Pulsa sobre una de ellas para establecerla como preferida.
+			La parte inferior de la pantalla está cubierta por la lista de sus transacciones, la cual está vacía al principio.
+			Las transacciones pendientes están en gris hasta que sean confirmadas.
+			Toque en una entrada para añadir las direcciones de los remitentes o destinatarios a su lista de contactos.
+			Deslice hacia la derecha o izquierda para aplicar filtros a la lista.
 		</p>
 		<p>
-			La parte inferior de la pantalla está ocupada por tu lista de transacciones, que está inicialmente vacía.
-			Las transacciones pendientes permanecerán en gris hasta que estén confirmadas.
-			Pulsa sobre una entrada para añadir direcciones de envío o recepción a la libreta de direcciones.
-			Desliza hacia la izquierda o derecha para aplicar filtros a la lista.
-		</p>
-		<p>
-			Puedes enviar o solicitar monedas pulsando los botones en la barra de acciones.
-			Hay más funcionalidad disponible en el menú de opciones.
+			Puede enviar o solicitar bitcoins al tocar los botones en la barra de acción.
+			Más opciones están disponibles en el menú de opciones.
 		</p>
 	]]>
 	</string>
-	<string name="help_request_coins">
+  <string name="help_request_coins">
 <![CDATA[
 		<p>
-			Mediante este cuadro de diálogo puedes solicitar Omnicoins de otra persona (que debería tener instalada Omnicoin Wallet).
+			Mediante este cuadro de diálogo puedes solicitar bitcoins de otra persona (que debería tener instalada Bitcoin Wallet).
 		</p>
 		<p>
-			En primer lugar, puedes introducir la cantidad de Omnicoins que se desea solicitar.
+			En primer lugar, puedes introducir la cantidad de bitcoins que se desea solicitar.
 		</p>
 		<p>
 			A continuación, puedes hacer que la otra persona explore el código QR generado,
 			o bien enviar tu solicitud a una persona remota mediante el botón de compartir de la barra de acciones.
-			La otra persona tendrá que acceder a la URL de Omnicoin.
+			La otra persona tendrá que acceder a la URL de Bitcoin.
 		</p>
 		<p>
-			En ambos casos, a la otra persona se le mostrará un cuadro de diálogo para enviar Omnicoins con todos los campos completados.
+			En ambos casos, a la otra persona se le mostrará un cuadro de diálogo para enviar bitcoins con todos los campos completados.
 			Si está de acuerdo, bastará con que acepte la transacción.
 		</p>
 	]]>
 	</string>
-	<string name="help_send_coins">
+  <string name="help_send_coins">
 <![CDATA[
 		<p>
-			Has iniciado el proceso de enviar Omnicoins.
-			Has llegado aquí bien a través de la pantalla principal o bien al acceder a una URL Omnicoin en tu navegador móvil.
+			Has iniciado el proceso de enviar bitcoins.
+			Has llegado aquí bien a través de la pantalla principal o bien al acceder a una URL Bitcoin en tu navegador móvil.
 		</p>
 		<p>
-			En primer lugar, debes introducir la dirección Omnicoin receptora del pago.
+			En primer lugar, debes introducir la dirección Bitcoin receptora del pago.
 			La dirección se irá autocompletando con las entradas conocidas de la libreta de direcciones.
-			También puedes explorar códigos QR con direcciones Omnicoin o solicitudes de Omnicoins pulsando el botón QR de la barra de acciones.
+			También puedes explorar códigos QR con direcciones Bitcoin o solicitudes de bitcoins pulsando el botón QR de la barra de acciones.
 		</p>
 		<p>
-			A continuación, podrás ver cuántos Omnicoins puedes gastar en este momento.
+			A continuación, podrás ver cuántos bitcoins puedes gastar en este momento.
 			Cualquier discrepancia que haya con el saldo de la pantalla principal se debe a cantidades no confirmadas que aún no pueden gastarse.
 		</p>
 		<p>
@@ -67,7 +61,7 @@
 		</p>
 		<p>
 			Puedes llevar a cabo una transacción sin conexión.
-			Se enviará la siguiente vez que se reinicie Omnicoin Wallet.
+			Se enviará la siguiente vez que se reinicie Bitcoin Wallet.
 			Si quieres que se procese una transacción lo más rápido posible, asegúrate de tener una buena conexión (WLAN).
 		</p>
 		<p>
@@ -77,23 +71,23 @@
 		</p>
 	]]>
 	</string>
-	<string name="help_safety">
+  <string name="help_safety">
 <![CDATA[
 		<p>
-			<b>Algunos comentarios sobre la seguridad de tus Omnicoins:</b>
+			<b>Algunos comentarios sobre la seguridad de tus bitcoins:</b>
 		</p>
 		<p>
-			Los Omnicoins en Omnicoin Wallet se almacenan en el dispositivo.
-			<b>Si pierdes tu dispositivo, pierdes tus Omnicoins.</b>
+			Los bitcoins en Bitcoin Wallet se almacenan en el dispositivo.
+			<b>Si pierdes tu dispositivo, pierdes tus bitcoins.</b>
 			Esto es lo mismo que ocurriría con tu dinero en una cartera convencional.
 		</p>
 		<p>
-			<b>Antes de desinstalar Omnicoin Wallet</b> (o de eliminar los datos de aplicación o el almacenamiento del dispositivo), <b>transfiere tus Omnicoins a otra cartera</b>.
-			Los Omnicoins que queden en el dispositivo se perderán.
+			<b>Antes de desinstalar Bitcoin Wallet</b> (o de eliminar los datos de aplicación o el almacenamiento del dispositivo), <b>transfiere tus bitcoins a otra cartera</b>.
+			Los bitcoins que queden en el dispositivo se perderán.
 		</p>
 		<p>
 			<b>Las transacciones no se pueden deshacer</b>.
-			Si envías Omnicoins por error, no hay manera de recuperarlos a menos que conozcas al receptor y acepte devolvértelos.
+			Si envías bitcoins por error, no hay manera de recuperarlos a menos que conozcas al receptor y acepte devolvértelos.
 		</p>
 		<p>
 			<b>¡Mantén seguro tu dispositivo Android!</b>
@@ -102,9 +96,8 @@
 		</p>
 		<p>
 			¡Minimiza el riesgo!
-			<b>Utiliza Omnicoin Wallet solamente para cantidades pequeñas</b> de uso diario.
+			<b>Utiliza Bitcoin Wallet solamente para cantidades pequeñas</b> de uso diario.
 		</p>
 	]]>
 	</string>
-
 </resources>

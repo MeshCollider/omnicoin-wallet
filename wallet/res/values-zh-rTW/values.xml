@@ -2,11 +2,11 @@
 <resources>
 
 	<string-array name="preferences_precision_labels">
-		<item>OMC, 8位數</item>
-		<item>OMC, 6位數</item>
-		<item>OMC, 4位數</item>
-		<item>mOMC, 2位數</item>
-		<item>µOMC, 0位數</item>
+		<item>BTC, 8位數</item>
+		<item>BTC, 6位數</item>
+		<item>BTC, 4位數</item>
+		<item>mBTC, 2位數</item>
+		<item>µBTC, 0位數</item>
 	</string-array>
 
 </resources>
